@@ -8,10 +8,10 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "product")
 @Data
 @Builder
 @AllArgsConstructor @NoArgsConstructor
+@Table(name = "product")
 public class Producto {
 
     @Id
