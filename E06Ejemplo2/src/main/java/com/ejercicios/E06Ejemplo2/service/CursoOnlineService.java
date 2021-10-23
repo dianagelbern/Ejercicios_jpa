@@ -14,4 +14,6 @@ public class CursoOnlineService extends BaseService<CursoOnline, Long, CursoOnli
         super(repo);
     }
 
+
+
 }
