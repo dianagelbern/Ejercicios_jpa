@@ -22,8 +22,14 @@ public class Categoria implements Serializable {
     @OneToMany(mappedBy = "categoria", fetch = FetchType.EAGER) //(EAGER)Cada vez que llame al objeto me traerá todos los datos de su asociación
     private List <Producto> productos = new ArrayList<>();
 
+    @OneToMany(fetch = FetchType.LAZY)
+    private List<Categoria> subcategorias = new ArrayList<>();
+
     public Categoria(String nombre) {
         this.nombre = nombre;
     }
+
+
+
 
 }

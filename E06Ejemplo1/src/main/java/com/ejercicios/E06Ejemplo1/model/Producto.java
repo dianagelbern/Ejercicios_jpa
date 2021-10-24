@@ -39,4 +39,9 @@ public class Producto implements Serializable {
         c.getProductos().remove(this);
         this.categoria = null;
     }
+
+    public Producto(String nombre, double pvp) {
+        this.nombre = nombre;
+        this.pvp = pvp;
+    }
 }
