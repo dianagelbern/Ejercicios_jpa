@@ -14,6 +14,15 @@ public class CursoOnlineService extends BaseService<CursoOnline, Long, CursoOnli
         super(repo);
     }
 
+    @Override
+    public List<CursoOnline> saveAll() {
+        return null;
+    }
+
+    @Override
+    public List<CursoOnline> findAll() {
+        return this.repositories.findAll();
+    }
 
 
 }

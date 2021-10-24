@@ -24,7 +24,7 @@ public class CursoOnline implements Serializable {
     @JoinColumn(name = "profesor", foreignKey = @ForeignKey(name = "FK_CUROSOONLINE_PROFESOR"))
     private Profesor profesor;
 
-    @OneToMany(mappedBy = "cursoOnline", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "cursoOnline", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Video> videos = new ArrayList<>();
 
     public CursoOnline(String nombre, int puntuacion) {
@@ -32,7 +32,17 @@ public class CursoOnline implements Serializable {
         this.puntuacion = puntuacion;
     }
 
-    public void addVideos(Video v){
+    public void addProfesor(Profesor p){
+        this.profesor = p;
+        p.getCursosOnline().add(this);
+    }
+
+    public void removeProfesor(Profesor p){
+        p.getCursosOnline().remove(this);
+        this.profesor = null;
+    }
+
+    public void addVideo(Video v){
         v.setCursoOnline(this);
         this.videos.add(v);
     }

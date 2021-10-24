@@ -28,13 +28,6 @@ public class Profesor implements Serializable {
 
     //Preguntarle al profesor si estos helpers son válidos o deben encontrarse en CursosOnline
 
-    public void addCursoOnline(CursoOnline c){
-        c.setProfesor(this);
-        this.cursosOnline.add(c);
-    }
 
-    public void removeCursoOnline(CursoOnline c){
-        this.cursosOnline.remove(c);
-        c.setProfesor(null);
-    }
+
 }

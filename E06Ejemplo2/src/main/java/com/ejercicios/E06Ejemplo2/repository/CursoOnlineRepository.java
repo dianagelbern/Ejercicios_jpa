@@ -9,6 +9,5 @@ import java.util.List;
 
 public interface CursoOnlineRepository extends JpaRepository<CursoOnline, Long> {
 
-    @Query("select distinct c from Compuesto c join fetch c.videos")
-    List<CursoOnline> findAllJoin();
+
 }

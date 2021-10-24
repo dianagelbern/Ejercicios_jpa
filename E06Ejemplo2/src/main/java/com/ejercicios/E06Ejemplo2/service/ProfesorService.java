@@ -14,4 +14,8 @@ public class ProfesorService extends BaseService<Profesor, Long, ProfesorReposit
     }
 
 
+    @Override
+    public List<Profesor> saveAll() {
+        return null;
+    }
 }

@@ -6,6 +6,8 @@ public interface IBaseService <T, ID>{
 
     T save(T t);
 
+    List<T> saveAll();
+
     T findById(ID id);
 
     List<T> findAll();
